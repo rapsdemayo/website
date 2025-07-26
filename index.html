@@ -15,10 +15,21 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
     }h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #00bfff;
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
 }
 
 p {
@@ -28,22 +39,54 @@ p {
   line-height: 1.5;
 }
 
-a {
-  color: #00ffcc;
+.discord-button {
+  background-color: #5865F2;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
   text-decoration: none;
-  font-weight: bold;
+  display: inline-block;
   font-size: 1.1rem;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-a:hover {
-  text-decoration: underline;
+.discord-button:hover {
+  background-color: #4752C4;
+}
+
+.lightning {
+  position: absolute;
+  width: 2px;
+  height: 100vh;
+  background: white;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  animation: lightning 5s infinite;
+}
+
+@keyframes lightning {
+  0%, 97%, 100% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.5;
+  }
 }
 
   </style>
 </head>
 <body>
+  <div class="lightning"></div>
   <h1>RAPS STORE</h1>
   <p>Selamat datang di <strong>RAPS STORE</strong> — Toko online modern yang terpercaya, cepat, dan aman. Kami menyediakan layanan terbaik dengan harga bersaing serta jaminan kepuasan pelanggan. Bergabunglah dengan komunitas kami dan nikmati pengalaman belanja yang berbeda!</p>
-  <p>Link Discord: <a href="https://discord.gg/eutBuh57nk" target="_blank">https://discord.gg/eutBuh57nk</a></p>
+  <button class="discord-button" onclick="window.open('https://discord.gg/eutBuh57nk', '_blank')">Gabung Discord</button>
 </body>
 </html>
