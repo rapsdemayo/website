@@ -4,19 +4,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RAPS STORE</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at center, #0e0e20, #1e1e2f);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
-      text-align: center;
       overflow: hidden;
-    }h1 {
+      color: white;
+    }.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #00bfff;
@@ -76,36 +94,18 @@ p {
   box-shadow: 0 0 15px #4752C4, 0 0 30px #4752C4;
 }
 
-.lightning {
-  position: absolute;
-  width: 3px;
-  height: 100vh;
-  background: #00f0ff;
-  top: 0;
-  left: 50%;
-  opacity: 0;
-  filter: blur(2px);
-  animation: lightning 5s infinite;
-}
-
-@keyframes lightning {
-  0%, 97%, 100% {
-    opacity: 0;
-  }
-  98% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0.6;
-  }
-}
-
   </style>
 </head>
 <body>
-  <div class="lightning"></div>
-  <h1>RAPS STORE</h1>
-  <p>Selamat datang di <strong>RAPS STORE</strong> — Toko online modern yang terpercaya, cepat, dan aman. Kami menyediakan layanan terbaik dengan harga bersaing serta jaminan kepuasan pelanggan. Bergabunglah dengan komunitas kami dan nikmati pengalaman belanja yang berbeda!</p>
-  <button class="discord-button" onclick="window.open('https://discord.gg/eutBuh57nk', '_blank')">Gabung Discord</button>
+  <video class="background-video" autoplay muted loop>
+    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/Lightning_Rain_Storm4.mp447121.webm" type="video/webm">
+    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/Lightning_Rain_Storm4.mp447121.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <h1>RAPS STORE</h1>
+    <p>Selamat datang di <strong>RAPS STORE</strong> — Toko online modern yang terpercaya, cepat, dan aman. Kami menyediakan layanan terbaik dengan harga bersaing serta jaminan kepuasan pelanggan. Bergabunglah dengan komunitas kami dan nikmati pengalaman belanja yang berbeda!</p>
+    <button class="discord-button" onclick="window.open('https://discord.gg/eutBuh57nk', '_blank')">Gabung Discord</button>
+  </div>
 </body>
 </html>
