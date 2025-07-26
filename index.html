@@ -1,114 +1,87 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RAPS STORE</title>
   <style>
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
-      background-color: #0e0e20; /* fallback color */
-    }.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(0.4);
-  background-color: #0e0e20; /* ensure fallback still dark */
-}
+    }
 
-.content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  padding: 20px;
-}
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #00bfff;
-  animation: flicker 1.5s infinite;
-  position: relative;
-}
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
 
-h1::after {
-  content: '\26A1'; /* Unicode petir */
-  position: absolute;
-  right: -30px;
-  top: -10px;
-  font-size: 2rem;
-  color: #00f0ff;
-  animation: flicker-small 2s infinite;
-}
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 16px;
+      background-color: white;
+    }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.4;
-  }
-}
+    h1 {
+      font-size: 2.5rem;
+      color: #00bfff;
+    }
 
-@keyframes flicker-small {
-  0%, 100% { opacity: 0.9; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(1.3); }
-}
+    .description {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
 
-p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.5;
-}
+    .discord-button {
+      background-color: #5865F2;
+      border: none;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
+    }
 
-.discord-button {
-  background-color: #5865F2;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.1rem;
-  margin-top: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2;
-}
-
-.discord-button:hover {
-  background-color: #4752C4;
-  box-shadow: 0 0 15px #4752C4, 0 0 30px #4752C4;
-}
-
+    .discord-button:hover {
+      background-color: #4752C4;
+      box-shadow: 0 0 20px rgba(71, 82, 196, 0.8);
+    }
   </style>
 </head>
 <body>
-  <video class="background-video" autoplay muted loop playsinline>
-    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/Lightning_Rain_Storm4.mp447121.webm" type="video/webm">
-    <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/Lightning_Rain_Storm4.mp447121.mp4" type="video/mp4">
-    <!-- Fallback text -->
-    Video tidak dapat dimuat. Pastikan koneksi Anda stabil.
-  </video>
-  <div class="content">
-    <h1>RAPS STORE</h1>
-    <p>Selamat datang di <strong>RAPS STORE</strong> — Toko online modern yang terpercaya, cepat, dan aman. Kami menyediakan layanan terbaik dengan harga bersaing serta jaminan kepuasan pelanggan. Bergabunglah dengan komunitas kami dan nikmati pengalaman belanja yang berbeda!</p>
-    <button class="discord-button" onclick="window.open('https://discord.gg/eutBuh57nk', '_blank')">Gabung Discord</button>
+  <div class="container">
+    <div class="header">
+      <img class="https://cdn.discordapp.com/attachments/1390247622429773894/1398707484201455658/file_000000004ecc6230bb5d588dc2600c23.png?ex=6886575a&is=688505da&hm=34fd0c2498dfc89b8207094f1a73aca19e2a3f1d1fbe4fe28684fd77d3c85b10&" alt="Logo RAPS STORE" />
+      <h1>RAPS STORE</h1>
+    </div>
+    <p class="description">
+      Selamat datang di <strong>RAPS STORE</strong> — Toko online digital modern dan terpercaya.
+      Kami menyediakan layanan aman, cepat, dan profesional dengan jaminan kualitas terbaik
+      untuk kebutuhan digital Anda.
+    </p>
+    <button class="discord-button" onclick="window.open('https://discord.gg/eutBuh57nk', '_blank')">
+      LINK DISCORD
+    </button>
   </div>
 </body>
 </html>
